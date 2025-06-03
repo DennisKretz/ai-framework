@@ -59,7 +59,7 @@ async def generate_and_stream(self, message, processed_input, processed_context)
 
 AiChatBot = bot.ChatBot
 
-#intents = discord.Intents.all()
+intents = discord.Intents.all()
 import threading
 
 
@@ -74,8 +74,8 @@ class ChatBot(discord.Client):
 
     def __init__(self) -> None:
         #self.set_response_chance()
-        super().__init__()
-        #super().__init__(intents=intents)
+        #super().__init__()
+        super().__init__(intents=intents)
         self.ai = AiChatBot(memory_file="memory.json")
 
     async def get_chat_context(self, message):

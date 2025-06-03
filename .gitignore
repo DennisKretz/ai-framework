@@ -4,3 +4,4 @@ everything.py
 api.py
 hugtoken.txt
 latest.py
+__pycache__
